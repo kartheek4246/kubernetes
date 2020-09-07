@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   labels:
     run: nginx
-  name: nginx-deploy
+  name: nginx-deploy-main
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      run: nginx
+      run: nginx-main
   template:
     metadata:
       labels:
-        run: nginx
+        run: nginx-main
     spec:
       containers:
       - image: nginx
